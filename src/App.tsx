@@ -88,25 +88,19 @@ export default function App() {
           </motion.p>
           <div className="mt-6 flex gap-3">
             <a
-              href="https://github.com/yourname"
+              href="https://github.com/Lucasoep"
               target="_blank"
-              className="inline-flex items-center gap-2 rounded-2xl border border-white/10 px-4 py-2 hover:bg-white/5 transition"
+              className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-blue-500/20 px-4 py-2 hover:bg-blue-500/30 transition"
             >
               <Github className="w-4 h-4" /> GitHub
-            </a>
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 rounded-2xl bg-blue-500/20 px-4 py-2 hover:bg-blue-500/30 transition"
-            >
-              See Projects
             </a>
           </div>
         </section>
 
         {/* Projects */}
-        <section id="projects" className="mx-auto max-w-6xl px-4 pb-24">
+        <section id="projects" className="mx-auto max-w-6xl px-4 pb-24 -mt-4">
           <div className="flex items-end justify-between mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Selected Projects</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">Projects</h2>
             <p className="text-sm text-slate-400">Hover for details</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -119,15 +113,39 @@ export default function App() {
                 className="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5"
               >
                 <img
-                  src={p.image}
-                  alt=""
-                  className="w-full aspect-[4/3] object-cover opacity-90 group-hover:opacity-100 transition"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition" />
+  src={p.image}
+  alt=""
+  className="w-full aspect-[4/3] object-cover opacity-90 group-hover:opacity-100 transition group-hover:scale-105 duration-300"
+  loading="lazy"
+/>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/60 to-transparent opacity-0 group-hover:opacity-100 transition" />
+
                 <div className="absolute inset-0 p-4 flex flex-col justify-end">
-                  <h3 className="text-lg font-semibold">{p.title}</h3>
-                  <p className="text-sm text-slate-300 line-clamp-2">{p.blurb}</p>
+  <h3
+    className="
+      text-lg font-semibold 
+      drop-shadow-[0_1px_3px_rgba(0,0,0,0.90)]
+      transition-all duration-500
+      translate-y-5 group-hover:translate-y-0
+    "
+  >
+    {p.title}
+  </h3>
+
+  <p
+    className="
+      text-sm text-slate-300 line-clamp-2
+      opacity-0 group-hover:opacity-100
+      transition-all duration-500
+      translate-y-4 group-hover:translate-y-0
+    "
+  >
+    {p.blurb}
+  </p>
+
+
+
                   <div className="mt-2 flex flex-wrap gap-2">
                     {p.tech.map((t) => (
                       <span
