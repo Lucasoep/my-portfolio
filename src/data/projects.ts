@@ -20,7 +20,7 @@ export const PROJECTS: ProjectMeta[] = [
     slug: "placeholder-2",
     title: "The Space Journey",
     blurb: "Journey throughout Space",
-    image: "/Space.jpg",
+    image: "Space.jpg",
     tech: ["React", "Canvas"],
   },
   {
