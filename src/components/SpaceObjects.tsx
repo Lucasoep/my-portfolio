@@ -167,7 +167,7 @@ function Satellite({
 export default function SpaceObjects() {
   return (
     <div className="absolute inset-0 z-[5] pointer-events-none">
-      <Planet size={220} top="14%" left="6%" tint="#60a5fa" withRing hideOnSmall />
+      <Planet size={220} top="14%" left="6%" tint="#60a5fa" withRing/>
       <Planet size={140} top="72%" left="78%" tint="#a78bfa" />
       <Satellite centerTop="10%" centerRight="8%" radius={30} />
     </div>
