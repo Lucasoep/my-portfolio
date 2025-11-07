@@ -150,7 +150,7 @@ export default function App() {
                     {p.tech.map((t) => (
                       <span
                         key={t}
-                        className="text-xs px-2 py-1 rounded-full bg-white/10"
+                        className="text-xs px-2 py-1 rounded-full bg-white/15"
                       >
                         {t}
                       </span>
@@ -159,7 +159,7 @@ export default function App() {
                   <div className="mt-3 flex gap-2">
                     <a
                       href={p.live ?? "#"}
-                      className="inline-flex items-center gap-1 text-sm rounded-xl bg-white/10 px-3 py-1.5 hover:bg-white/20"
+                      className="inline-flex items-center gap-1 text-sm rounded-xl bg-white/15 px-3 py-1.5 hover:bg-white/20"
                     >
                       <ExternalLink className="w-4 h-4" /> Demo
                     </a>
